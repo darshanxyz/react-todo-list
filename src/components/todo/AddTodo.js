@@ -6,16 +6,14 @@ class AddTodo extends Component {
     title: ''
   }
 
-  onTextChang = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value
-    })
-  }
+  onTextChange = (e) => this.setState({
+    [e.target.name]: e.target.value
+  })
 
   onFormSubmit = (e) => {
     e.preventDefault();
     this.props.addItem(this.state.title);
-    this.setState({ title: '' })
+    this.setState({ title: '' });
   }
 
   render() {
