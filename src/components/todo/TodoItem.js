@@ -6,9 +6,9 @@ class TodoItem extends Component {
     return {
       background: '#FFF',
       padding: '20px',
+      margin: '0px 10px',
       borderBottom: 'none',
       borderRadius: '7px',
-      marginBottom: '10px',
       borderRight: this.props.todo.completed ? '10px solid #80C687' : 'none',
       color: '#555',
       fontWeight: '600',

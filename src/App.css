@@ -14,28 +14,17 @@ body {
   height: 100%;
 }
 
+a, a:focus {
+  text-decoration: none;
+  color: inherit;
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: auto;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  grid-template-areas: 
-    ". header ."
-    ". add-todo ."
-    ". todo-item .";
-}
-
-.add-todo {
-  grid-area: add-todo;
-}
-
-.todo-item {
-  grid-area: todo-item;
-}
-
-.header {
-  grid-area: header;
 }
 
 .btn {

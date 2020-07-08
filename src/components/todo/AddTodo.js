@@ -19,21 +19,21 @@ class AddTodo extends Component {
   render() {
     const formStyle = {
       display: 'grid',
-      gridTemplateColumns: 'auto auto auto auto auto auto',
-      padding: '15px 0',
+      gridTemplateColumns: '10fr 2fr',
       gridColumnGap: '20px',
       gridRowGap: '20px',
-      gridColumn: '2/3'
+      gridColumn: '2/3',
+      margin: '0 10px'
     }
     const textBoxStyle = {
-      gridColumn: '1/6',
+      gridColumn: '1/11',
       padding: '15px',
       boxShadow: '3px 3px 15px -5px rgba(0,0,0,0.2)',
       border: 'none',
       borderRadius: '5px'
     }
     const submitBtnStyle = {
-      gridColumn: '6/7'
+      gridColumn: '11/12'
     }
     return (
       <form onSubmit={this.onFormSubmit} style={formStyle}>
