@@ -18,25 +18,29 @@ class AddTodo extends Component {
 
   render() {
     const formStyle = {
-      display: 'flex',
-      padding: '15px 0'
+      display: 'grid',
+      gridTemplateColumns: 'auto auto auto auto auto auto',
+      padding: '15px 0',
+      gridColumnGap: '20px',
+      gridRowGap: '20px',
+      gridColumn: '2/3'
     }
     const textBoxStyle = {
-      flex: '10',
+      gridColumn: '1/6',
       padding: '15px',
-      marginRight: '5px',
-      border: '1px solid #ddd',
+      boxShadow: '3px 3px 15px -5px rgba(0,0,0,0.2)',
+      border: 'none',
       borderRadius: '5px'
     }
     const submitBtnStyle = {
-      flex: '1'
+      gridColumn: '6/7'
     }
     return (
       <form onSubmit={this.onFormSubmit} style={formStyle}>
         <input
           type="text"
           name="title"
-          placeholder="Add todo"
+          placeholder="Enter the task"
           style={textBoxStyle}
           value={this.state.title}
           onChange={this.onTextChange}
@@ -44,7 +48,7 @@ class AddTodo extends Component {
         <input
           type="submit"
           value="Add todo"
-          className="btn"
+          className="btn btn-primary"
           style={submitBtnStyle}
         />
 
