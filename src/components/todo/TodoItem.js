@@ -45,8 +45,9 @@ class TodoItem extends Component {
     return (
       <div style={this.getStyle()}>
         <div style={todoItemStyle}>
-          <input style={inputStyle} type="checkbox" onChange={this.props.markComplete.bind(this, id)} /> <p style={pStyle}>{title}</p>
-          <button className="btn btn-red" onClick={this.props.deleteItem.bind(this, id)} style={btnStyle}>Remove task</button>
+          <input style={inputStyle} type="checkbox" onChange={this.props.markComplete.bind(this, id)} defaultChecked={this.props.checked} /> <p style={pStyle}>{title}</p>
+          {/* <button className="btn btn-primary" onClick={this.props.markComplete.bind(this, id)} style={btnStyle}>Mark Complete</button> */}
+          <button className="btn btn-red" onClick={this.props.deleteItem.bind(this, id)} style={btnStyle}>Remove</button>
         </div>
       </div>
     );

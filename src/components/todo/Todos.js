@@ -4,7 +4,7 @@ import TodoItem from './TodoItem';
 class Todo extends Component {
     render() {
         return this.props.todos.map((todo) => (
-            <TodoItem key={todo.id} todo={todo} markComplete={this.props.markComplete} deleteItem={this.props.deleteItem} />
+            <TodoItem checked={todo.completed} key={todo.id} todo={todo} markComplete={this.props.markComplete} deleteItem={this.props.deleteItem} />
         ));
     }
 }

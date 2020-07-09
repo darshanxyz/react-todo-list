@@ -19,6 +19,10 @@ a, a:focus {
   color: inherit;
 }
 
+a:active, a:focus {
+  font-weight: 700;
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
